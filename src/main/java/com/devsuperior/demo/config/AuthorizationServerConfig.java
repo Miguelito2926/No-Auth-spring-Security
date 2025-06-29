@@ -69,6 +69,7 @@ public class AuthorizationServerConfig {
 
 	@Bean
 	@Order(2)
+	@SuppressWarnings("removal") // ou "deprecation" se sua IDE pedir
 	public SecurityFilterChain asSecurityFilterChain(HttpSecurity http) throws Exception {
 
 		OAuth2AuthorizationServerConfiguration.applyDefaultSecurity(http);
